@@ -1,1 +1,3 @@
-# chrome-extensions-dompicker
+# DomPicker
+
+(In Development)
