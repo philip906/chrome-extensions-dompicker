@@ -1,0 +1,205 @@
+#autobuilder-gen-container {
+    position: absolute !important;
+    z-index: 99999 !important;
+    background-color: white !important;
+    border: 2px solid gray !important;
+    width: 450px !important;
+    left: 25%;
+    top: 30%;
+    overflow: auto !important;
+    padding: 10px !important;
+}
+
+#autobuilder-gen-container * {
+    font: 18px/18px 'Helvetica', Arial, clean, sans-serif !important;
+    text-align: initial;
+}
+
+#autobuilder-gen-container select {
+    -webkit-appearance: menulist !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    border: 1px solid !important;
+    white-space: pre !important;
+    -webkit-rtl-ordering: logical !important;
+    color: black !important;
+    background-color: white !important;
+    cursor: default !important;
+    font-size: 14px !important;
+    padding: 0 !important;
+    margin-bottom: 3px;
+}
+
+#autobuilder-gen-header-container {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+}
+
+#autobuilder-gen-scraper-object-list-container {
+    display: none;
+}
+
+
+#autobuilder-gen-generate-preview-container {
+    display: none;
+}
+
+
+#autobuilder-gen-generated-preview-container {
+    display: none;
+    margin-top: 10px !important;
+}
+
+
+#autobuilder-gen-container textarea {
+    width: 98% !important;
+    font-size: 12px !important;
+    padding: 5px !important;
+    border: 1px solid !important;
+}
+
+#autobuilder-gen-value-to-extract-container {
+    display: none;
+    margin-top: 10px !important;
+}
+
+
+#autobuilder-gen-container .autobuilder-gen-button {
+    background-color: blue !important;
+    display: inline-block;
+    padding: 10px !important;
+    margin-top: 15px !important;
+    color: white; !important
+    font-weight: bold !important;
+    font-size: 15px !important;
+    margin-right: 5px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+
+#autobuilder-gen-current-config-container {
+    margin-top: 15px !important;
+}
+
+#autobuilder-gen-menu-container-border {
+    padding-bottom: 6px !important;
+    border-top: 2px solid gray !important;
+    margin-top: 8px !important;
+}
+
+
+#autobuilder-gen-menu-container > .autobuilder-gen-menu-item {
+    color: white !important;
+    background-color: gray !important;
+    padding: 9px !important;
+    border: 2px solid gray !important;
+    margin-right: 2px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+
+#autobuilder-gen-current-config-txt {
+    min-height: 200px !important;
+}
+
+#autobuilder-gen-no-element-clicked-container {
+    margin-top: 10px !important;
+    display: none;
+}
+#autobuilder-gen-extracted-value-lbl {
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+#autobuilder-gen-extracted-value-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+#autobuilder-gen-selector-lbl {
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
+#autobuilder-gen-menu-container > .autobuilder-gen-selected-menu-item {
+    background-color: white !important;
+    color: black !important;
+    border-bottom-color: white !important;
+    cursor: pointer;
+}
+
+#autobuilder-gen-current-config-panel {
+    display: none;
+}
+
+#autobuilder-gen-parent.autobuilder-gen-button,
+#autobuilder-gen-child.autobuilder-gen-button,
+#autobuilder-gen-prev-sibling.autobuilder-gen-button,
+#autobuilder-gen-next-sibling.autobuilder-gen-button {
+    display: none;
+}
+
+
+#autobuilder-gen-header-hide-options-container {
+    float: right !important;
+}
+
+#autobuilder-gen-header-hide-options-hide-btn {
+    font-size: 20px !important;
+    padding: 2px 10px !important;
+    margin-right: 2px !important;
+}
+
+#autobuilder-gen-header-hide-options-close-btn {
+    font: 18px/18px 'Helvetica', Arial, clean, sans-serif !important; !important; !important;
+    padding: 2px 9px !important;
+    position: relative !important;
+    padding-bottom: 4px !important;
+    top: -1px !important;
+}
+
+.autobuilder-gen-hide-options-btn {
+    background-color: lightgray !important;
+    cursor: pointer !important;
+}
+
+#autobuilder-gen-header-lbl {
+    font: bold 16px/16px 'Helvetica', Arial, clean, sans-serif !important;
+    float: left !important;
+    margin-top: 3px !important;
+}
+
+#autobuilder-gen-container.autobuilder-gen-container-hidden {
+    left: 0 !important;
+    bottom: 0 !important;
+    top: inherit !important;
+    height: 16px !important;
+    width: 272px !important;
+    overflow: hidden !important;
+    position: fixed !important;
+}
+
+#autobuilder-gen-header-hide-options-show-btn {
+    display: none;
+    font: 18px/18px 'Helvetica', Arial, clean, sans-serif !important;
+    padding: 2px 8px !important;
+    margin-right: 2px !important;
+    padding-bottom: 4px !important;
+    position: relative !important;
+    top: -1px !important;
+}
+
+#autobuilder-gen-menu-container {
+    margin-top: 50px
+}
+
+#autobuilder-gen-no-element-clicked-lbl,
+#autobuilder-gen-selector,
+#autobuilder-gen-selector-lbl {
+    font-size: 14px !important;
+}
+
+#autobuilder-gen-extracted-value {
+    font-size: 14px !important;
+}

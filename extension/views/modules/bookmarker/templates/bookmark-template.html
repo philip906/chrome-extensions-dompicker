@@ -1,0 +1,15 @@
+<div ng-repeat="bookmark in bookmarks" >
+    <div class="more-options-container" >
+        <div ng-if="bookmark.bookmarks.length" class="menu-option" ng-repeat="childBookmark in bookmark.bookmarks | orderBy:'childBookmark.name'" >
+            <div sl-option-lbl sl-title="{{childBookmark.name}}" ></div>
+            <div ng-if="childBookmark.bookmarks" ng-repeat="grandchildBookmark in childBookmark.bookmarks" onload="bookmarks = grandchildBookmark.bookmarks" >
+            </div>
+            <div ng-if="childBookmark.url" class="option-actions" >
+                <a target="_blank" href="{{childBookmark.url}}" class="button" >{{childBookmark.name}}</a>
+            </div>
+        </div>
+        <div ng-if="bookmark.url" class="option-actions" >
+            <a target="_blank" href="{{bookmark.url}}" class="button" >{{bookmark.name}}</a>
+        </div>
+    </div>
+</div>

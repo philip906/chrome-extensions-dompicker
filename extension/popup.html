@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-csp>
+<head>
+
+    <!-- libraries -->
+    <script type="text/javascript" src="scripts/lib/angular/angular.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+
+    <!-- css
+    <link rel="stylesheet" href="css/modules/regex-gen/popup/regex-gen.css" />-->
+    <link rel="stylesheet" href="css/global/popup/popup.css" />
+
+
+    <!-- factories
+    <script type="text/javascript" src="scripts/global/popup/factories/popup-factory.js"></script> -->
+    <script type="text/javascript" src="scripts/modules/bookmarker/factories/bookmarker-factory.js"></script>
+
+    <!-- controllers
+    <script type="text/javascript" src="scripts/modules/autobuilder-gen/popup/controllers/autobuilder-gen-controller.js"></script>
+    <script type="text/javascript" src="scripts/modules/regex-gen/popup/controllers/regex-gen-controller.js"></script>
+    <script type="text/javascript" src="scripts/modules/testing/popup/controllers/testing-controller.js"></script> -->
+    <script type="text/javascript" src="scripts/modules/bookmarker/controllers/bookmarker-controller.js"></script>
+
+    <!-- directives
+    <script type="text/javascript" src="scripts/modules/regex-gen/popup/directives/regex-gen-input-directive.js"></script>
+    <script type="text/javascript" src="scripts/modules/regex-gen/popup/directives/regex-gen-new-value-part-directive.js"></script> -->
+    <script type="text/javascript" src="scripts/global/popup/directives/option-lbl-directive.js"></script>
+    <script type="text/javascript" src="scripts/global/popup/directives/option-action-directive.js"></script>
+
+    <!-- filters -->
+    <script type="text/javascript" src="scripts/global/popup/filters/has-value-filter.js"></script>
+
+
+</head>
+<body>
+
+    <div id="menu-options-container">
+        <!-- Bookmarker Module -->
+        <div class="menu-option" ng-controller="BookmarkerController" >
+            <div sl-option-lbl sl-arg-title="{{'Bookmarker'}}" ></div>
+            <div class="more-options-container" >
+                <script type="text/ng-template" id="bookmarkTemplate">
+
+                    <div ng-if="bookmark.bookmarks.length" class="menu-option">
+                        <div sl-option-lbl sl-arg-title="{{bookmark.name}}" ></div>
+                        <div ng-repeat="bookmark in bookmark.bookmarks | orderBy:'bookmark.name'" ng-include="'bookmarkTemplate'" >
+                        </div>
+                    </div>
+                    <div class="menu-option">
+                        <div ng-if="bookmark.url" class="option-actions" >
+                            <a target="_blank" href="{{bookmark.url}}" class="button" >{{bookmark.name}}</a>
+                        </div>
+                    </div>
+
+                </script>
+                <div ng-include="'bookmarkTemplate'" ng-repeat="bookmark in bookmarks"></div>
+            </div>
+        </div>
+
+        <!-- Autobuilder Generator Module
+        <div class="menu-option" ng-controller="AutobuilderGenController" >
+            <div sl-option-lbl sl-title="{{'Autobuilder Generator (Beta)'}}" ></div>
+            <div class="option-actions" >
+                <span sl-option-action sl-tool-values="autobuilder-gen,tool,on" sl-title="Turn On" sl-is-default="{{true}}" ></span>
+                <span sl-option-action sl-tool-values="autobuilder-gen,tool,off" sl-title="Turn Off"  ></span>
+            </div>
+        </div>-->
+        <!-- Regex Generator Module
+        <div class="menu-option" ng-controller="RegexGenController" >
+            <div sl-option-lbl sl-title="{{'Regex Generator (Beta)'}}" ></div>
+            <div class="regex-generator-container" >
+                <input sl-regex-gen-input ng-model="current.originalValue" sl-placeholder="original value" >
+                <input sl-regex-gen-input ng-model="current.newValue" sl-placeholder="new value" >
+                <div id="new-value-parts-container" ng-show="current.newValue" >
+                    <span class="lbl">Step 1: Select wild values: </span>
+                    <div id="new-value-parts" >
+                        <div sl-regex-gen-new-value-part class="new-value-part-container" sl-index="valuePart.index" sl-value="valuePart.value" ng-repeat="valuePart in current.newValueParts" ></div>
+                    </div>
+                </div>
+                <div id="regex-gen-results-container" >
+                    <span class="lbl">Regex: </span><span id="regex-gen-results" >{{current.regex.display}}</span>
+                </div>
+            </div>
+        </div>-->
+        <!-- Testing Module
+        <div class="menu-option" ng-controller="TestingController" >
+            <div sl-option-lbl sl-title="{{'Testing (Beta)'}}" ></div>
+            <div class="more-options-container" >
+                <div class="menu-option" >
+                    <div sl-option-lbl sl-title="{{'Hidden Mode'}}" ></div>
+                    <div class="option-actions" >
+                        <span sl-option-action sl-tool-values="rondavu_qa,cookie,1" sl-title="Turn On" sl-is-default="{{true}}" ></span>
+                        <span sl-option-action sl-tool-values="rondavu_qa,cookie,0" sl-title="Turn Off" ></span>
+                    </div>
+                </div>
+                <div class="menu-option" >
+                    <div sl-option-lbl sl-title="{{'Debug Mode'}}" ></div>
+                    <div class="option-actions" >
+                        <span sl-option-action sl-tool-values="rondavu_debug,cookie,1" sl-title="Turn On" sl-is-default="{{true}}" ></span>
+                        <span sl-option-action sl-tool-values="rondavu_debug,cookie,0" sl-title="Turn Off" ></span>
+                    </div>
+                </div>
+                <div class="menu-option" >
+                    <div sl-option-lbl sl-title="{{'AB Testing'}}" ></div>
+                    <div class="option-actions" >
+                        <span sl-option-action sl-tool-values="rdv_test_group,cookie,1" sl-title="Group A" ></span>
+                        <span sl-option-action sl-tool-values="rdv_test_group,cookie,2" sl-title="Group B" ></span>
+                    </div>
+                </div>
+                <div class="menu-option" >
+                    <div sl-option-lbl sl-title="{{'Bypass the CDN'}}" ></div>
+                    <div class="option-actions" >
+                        <span sl-option-action sl-tool-values="rondavu_bypass_cdn,query,1" sl-title="Turn On" sl-is-default="{{true}}" ></span>
+                        <span sl-option-action sl-tool-values="rondavu_bypass_cdn,query,0" sl-title="Turn Off" ></span>
+                    </div>
+                </div>
+            </div>
+        </div >-->
+    </div>
+
+</body>
+</html>
+
+

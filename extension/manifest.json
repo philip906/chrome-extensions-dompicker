@@ -1,0 +1,45 @@
+{
+    "author": "Philip Yates",
+    "name": "Sociable Labs Tool",
+    "version": "1.6.1",
+    "manifest_version": 2,
+    "icons": {
+        "16": "images/global/sl-logo.png",
+        "48": "images/global/sl-logo.png",
+        "128": "images/global/sl-logo.png"
+    },
+    "description": "A tool for you to solve all of your problems!",
+    "browser_action": {
+        "default_icon": "images/global/sl-logo.png",
+        "default_popup": "popup.html",
+        "default_title": "Sociable Labs 1.6.1"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["css/modules/autobuilder-gen/content-scripts/autobuilder-gen.css"],
+            "js": [
+                "scripts/lib/require/require.js",
+                "scripts/lib/require/require-cs.js",
+                "scripts/global/content-scripts/content-script-main.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "scripts/lib/jquery/jquery.js",
+        "scripts/lib/jquery/jquery-ui.js",
+        "scripts/modules/autobuilder-gen/content-scripts/autobuilder-gen.js",
+        "scripts/modules/testing/content-scripts/testing.js"
+    ],
+    "permissions": [
+        "webNavigation",
+        "http://*/",
+        "https://*/",
+        "cookies"
+    ],
+    "background": {
+        "page": "background.html",
+        "scripts": [],
+        "persistent": true
+    }
+}

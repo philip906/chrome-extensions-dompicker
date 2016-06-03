@@ -1,0 +1,68 @@
+.regex-generator-container {
+    margin-top: 10px;
+}
+
+.lbl {
+    font-weight: bold;
+}
+
+#results-container {
+    margin-top: 15px;
+}
+
+
+
+/*
+* start sl-regex-gen-input directive
+*/
+
+.sl-regex-gen-input-container {
+    position: relative;
+}
+
+.sl-input-placeholder {
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    color: gray;
+    font-size: 15px;
+}
+.sl-input-txt:focus + .sl-input-placeholder {
+    color: lightgray;
+}
+
+.sl-input-txt {
+    width: 174px;
+    font-size: 13px;
+}
+
+
+/*
+* end sl-regex-gen-input directive
+*/
+
+
+
+/*
+* start sl-regex-gen-new-value-part directive
+*/
+.new-value-part-container {
+    display: inline-block;
+}
+
+.new-value-part {
+    background-color: blue;
+    margin-right: 2px;
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.new-value-part.selected {
+    background-color: gray;
+}
+
+/*
+* end sl-regex-gen-new-value-part directive
+*/

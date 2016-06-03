@@ -1,0 +1,83 @@
+/*
+* start angular css
+*/
+.ng-hide {
+    display: none !important;
+}
+
+/*
+* end angular css
+*/
+.button {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 220px;
+    padding: 3px 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    display: block;
+    text-decoration: none;
+}
+
+/*
+* START MENU SETTINGS
+*/
+
+#menu-settings-save {
+    display: none;
+}
+
+.menu-setting {
+
+}
+
+/*
+* START MENU SETTINGS
+*/
+
+/*
+* START MENU OPTIONS
+*/
+.menu-option {
+    width: 230px;
+}
+.option-lbl-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.option-actions {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.menu-option:not(.selected) > .option-lbl-container > .option-arrow-left,
+.menu-option.selected > .option-lbl-container > .option-arrow-right,
+.menu-option.not-selected {
+    display: none;
+}
+.menu-option.selected > .option-lbl-container > .option-lbl {
+    float: right;
+}
+.menu-option:not(.selected) > .option-lbl-container + * {
+    display: none;
+}
+.option-arrow-right {
+    float: right;
+}
+
+/*
+* END MENU OPTIONS
+*/
+
+
+
+
+
+
